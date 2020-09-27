@@ -1,2 +1,2 @@
 # DARTS
-Differential arch search
+Differentiable arch search
