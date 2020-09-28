@@ -3,14 +3,14 @@ from collections import namedtuple
 Genotype = namedtuple('Genotype', 'normal normal_concat reduce reduce_concat')
 
 PRIMITIVES = [
-    'none',
-    'max_pool_3x3',
-    'avg_pool_3x3',
-    'skip_connect',
-    'sep_conv_3x3',
-    'sep_conv_5x5',
-    'dil_conv_3x3',
-    'dil_conv_5x5'
+    'none',           # 1
+    'max_pool_3x3',   # 2
+    'avg_pool_3x3',   # 3
+    'skip_connect',   # 4
+    'sep_conv_3x3',   # 5
+    'sep_conv_5x5',   # 6
+    'dil_conv_3x3',   # 7
+    'dil_conv_5x5'    # 8
 ]
 
 NASNet = Genotype(
@@ -71,6 +71,7 @@ AmoebaNet = Genotype(
   reduce_concat = [3, 4, 6]
 )
 
+
 DARTS_V1 = Genotype(
   normal=[('sep_conv_3x3', 1), 
   ('sep_conv_3x3', 0), 
@@ -93,8 +94,7 @@ DARTS_V1 = Genotype(
 
 
 
-DARTS_V2 = Genotype
-(
+DARTS_V2 = Genotype(
   normal=[
   ('sep_conv_3x3', 0), # 0
   ('sep_conv_3x3', 1), # 1
@@ -123,3 +123,4 @@ DARTS_V2 = Genotype
 )
 
 DARTS = DARTS_V2
+
